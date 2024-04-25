@@ -10,3 +10,26 @@ FormuLight is not just a calculator; it’s a comprehensive guide to mathematica
 
 ## Getting Started
 To get started, select a calculation from the sidebar on the left and enter the required inputs. Click the 'Calculate' button to see the result. You can also click the 'Clear' button to clear the inputs and start over.
+
+## Installation 
+1. **Clone the Repository:**
+   Open a terminal and clone the repository to your local machine with:
+   ```bash
+   git clone https://github.com/your-username/formulight.git
+   ```
+2.  **Navigate to the Project Directory:**
+Change to the cloned repository's directory:
+```
+cd formulight
+```
+3. **Install Dependencies:**
+If this project requires additional libraries or dependencies, use your package manager to install them.
+```
+ pip install streamlit
+```
+
+4.**Run the Application:**
+After installing the dependencies, run the application with:
+```
+streamlit run main.py
+```
