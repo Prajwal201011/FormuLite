@@ -1,6 +1,5 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math 
 
 st.sidebar.success("Welcome! 🎉")
