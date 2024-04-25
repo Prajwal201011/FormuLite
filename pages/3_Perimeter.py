@@ -1,11 +1,9 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math
 
 
-ch (label= "Perimeter",
-               color_name='red-70')
+st.header ("Perimeter")
 st.sidebar.success("Welcome! 🎉")
 st.sidebar.info("This is a simple web app that calculates the perimeter of a two-dimensional figure.")
 st.write('The perimeter of a two-dimensional figure is the distance covered around it.\n It defines the length of shape, whether it is a triangle, square, rectangle or a circle.')

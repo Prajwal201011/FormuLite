@@ -1,6 +1,5 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math 
 st.set_page_config(page_title='FormuLight: Illuminate Your Calculations',
         page_icon="🧮"
@@ -9,8 +8,7 @@ st.set_page_config(page_title='FormuLight: Illuminate Your Calculations',
 
 st.sidebar.success("Welcome! 🎉")
 st.sidebar.info("FormuLight is a simple calculator that can perform basic arithmetic operations and evaluate powers, square roots, and cube roots. 🧮")
-ch (label= "⁉️ Simple Calculator",
-               color_name='red-70')
+st.header ( "⁉️ Simple Calculator")
 
 n1 = st.number_input("Number 1", 0.0000, 10000000000.0000)
 n2 = st.number_input("Number 2", 0.0000, 10000000000.0000)

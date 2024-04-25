@@ -1,10 +1,8 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math
 st.sidebar.success("Welcome! 🎉")
-ch (label= "Simple Interest",
-               color_name='red-70')
+st.header("Simple Interest")
 
 st.sidebar.info("This is a simple interest calculator. You can calculate the simple interest and the amount by providing the principal, rate and term. \n You can provide the input either by using the slider or by typing the value in the text box.")
 st.write('Simple Interest is an easy method of calculating the interest for a loan/principal amount.\n Simple interest is a concept that is used in many sectors such as banking, finance, automobile, and so on.')

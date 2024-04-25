@@ -1,10 +1,8 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math 
 st.sidebar.success("Welcome! 🎉")
-ch (label= "Volume",
-               color_name='red-70')
+st.header ( "Volume")
 
 st.sidebar.info("This is a simple volume calculator for 3D shapes. Select a shape and enter the required values to calculate the volume of the shape. ")
 st.write("A volume is simply defined as the amount of space occupied by any three-dimensional solid. These solids can be a cube, a cuboid, a cone, a cylinder or a sphere.")

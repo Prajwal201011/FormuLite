@@ -1,56 +1,43 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math 
+
 st.sidebar.success("Welcome! 🎉")
-ch (label= "Volume",
-               color_name='red-70')
-
-st.sidebar.info("This is a simple volume calculator for 3D shapes. Select a shape and enter the required values to calculate the volume of the shape. ")
-st.write("A volume is simply defined as the amount of space occupied by any three-dimensional solid. These solids can be a cube, a cuboid, a cone, a cylinder or a sphere.")
-shp = st.selectbox("Select a 3D shape:" , ('Cube', "Cuboid", "Pyramid", "Sphere", "Cylinder"))
-
-if shp == 'Cube':
-        s = st.number_input("Length of the Side")
+st.header ( "Surface Area")
+st.write("This is a simple web app that calculates the surface area of a 3D shape. You can select a 3D shape from the dropdown menu and enter the required values to calculate the surface area of the shape. The app can calculate the surface area of a Cube, Cuboid, Pyramid, and Sphere. The formulas used to calculate the surface area of each shape are also displayed. Click the button below to get started!")
+st.write("The total area occupied by the surfaces of an object is called its surface area. ")
+cu = st.selectbox("Select a 3D shape to calculate Surface Area:" , ('Cube', "Cuboid", "Pyramid", "Sphere"))
+if cu == 'Cube':
+        s = st.number_input("Length of the Side of the Cube")
         def co():
-                st.write("Volume is ", s**3 ,"units³")
-                st.write('[$Formula: s³$]')
-        if st.button("Compete"):
+                st.write("Surface Area is ", 6*s**2 )
+                st.write("[$Formula: 6 * s²$]")
+        if st.button("Compute"):
                 co()
-elif shp == "Cuboid":
-         w = st.number_input("Width of cuboid")
-         l = st.number_input("Length of cuboid")
-         h = st.number_input("Height of cuboid")
-         def cub():
-                 st.write("Volume:", w*l*h,"units³")
-                 st.write('[$Formula: w*l*h$]')
-         if st.button("Compete"):
+
+elif cu == "Cuboid":
+        w = st.number_input("Width of  3D cuboid")
+        l = st.number_input("Length of 3D cuboid")
+        h = st.number_input("Height of  3D scuboid")
+        def cub():
+                st.write("Surface Area:", 2*(w*l + l*h + h*w),"units²")
+                st.write("[$Formula: 2 * (w*l + l*h + h*w)$]")
+        if st.button("Tabulate"):
                 cub()
-          
-elif shp == "Pyramid":
+
+elif cu == "Pyramid":
         b = st.number_input("Base")
         h = st.number_input("Height")
-
         def coml():
-                st.write("Volume is ", 1/3*b*h , "units³")
-                st.write('[$Formula: 1/3*b*h$]')
-        if st.button("Figure Out"):
+                st.write("Surface Area is ", b**2 + 2*b*(math.sqrt((b**2)/4 + h**2)) , "units²")
+                st.write("[$Formula: b² + 2b√(b²/4 + h²)$]")
+        if st.button("Check out"):
                 coml()
 
-elif shp == "Sphere":
+elif cu == "Sphere":
         r = st.number_input("Radius")
         def sph():
-                st.write("Volume is ", 4/3*math.pi*r**3 , "units³")
-                st.write('[$Formula: 4/3*π*r³$]')
-        if st.button("Calibrate"):
+                st.write("Surface Area is ", 4*math.pi*r**2 , "units²")
+                st.write("[$Formula: 4πr²$]")
+        if st.button("Make Out"):
                 sph()
-elif shp == "Cylinder":
-        r = st.number_input("Radius")
-        h = st.number_input("Height")
-        def cy():
-                st.write("Volume is ", math.pi*r**2*h , "units³")
-                st.write('[$Formula: π*r²*h$]')
-        if st.button("Complete"):
-                cy()
-
-st.write('--------')

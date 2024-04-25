@@ -3,8 +3,7 @@ import streamlit as st
 from streamlit_extras.colored_header import colored_header as ch
 import math 
 st.sidebar.success("Welcome! 🎉")
-ch (label= "Compund Interest",
-               color_name='red-70')
+st.header ("Compund Interest")
 st.sidebar.info("This app calculates the compound interest for you. Just enter the values and get the result.")
 
 st.write("Compound interest is the interest calculated on the initial principal and also on the accumulated interest of previous periods of a deposit or loan.\n It is the result of reinvesting interest, rather than paying it out, so that interest in the next period is then earned on the principal sum plus previously accumulated interest.")

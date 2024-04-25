@@ -4,8 +4,7 @@ from streamlit_extras.colored_header import colored_header as ch
 import math 
 
 st.sidebar.success("Welcome! 🎉")
-ch (label= "Speed, Distance and Time",
-               color_name='red-70')
+st.header("Speed, Distance and Time")
 
 st.write("This app calculates the speed, distance and time of an object. Please enter the values in the fields below.")
 st.write("Speed: Speed is the rate at which a particular distance is covered by an object in motion.\nTime: Time is an interval separating two events.\nDistance: Distance is the extent of space between two points.")

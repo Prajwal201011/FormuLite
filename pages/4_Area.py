@@ -1,12 +1,10 @@
 from streamlit import *
 import streamlit as st 
-from streamlit_extras.colored_header import colored_header as ch
 import math
 
 st.sidebar.success("Welcome! 🎉")
 st.sidebar.info("This is a simple web app that calculates the area of a 2D shape. Select a shape from the dropdown menu and enter the required values. Click the button to calculate the area.")
-ch (label= "Area",
-               color_name='red-70')
+st.header( "Area")
 st.write("The area is the region bounded by the shape of an object.\n The space covered by the figure or any two-dimensional geometric shape, in a plane, is the area of the shape.")
 shap = st.selectbox("Select a 2D shape:" , ('Square', "Circle", "Triangle", "Rectangle", "Parallelogram", "Trapezium"))
 
